@@ -1,9 +1,11 @@
-import { REQUEST_API, RESPONSE_ERROR, RESPONSE_SUCCESS } from '../actions';
+import { GET_EXPENSES, REQUEST_API, RESPONSE_ERROR, RESPONSE_SUCCESS } from '../actions';
 
 // Esse reducer será responsável por tratar o todas as informações relacionadas as despesas
 const INITIAL_STATE = {
   currencies: [],
+  expenses: [],
   isLoading: false,
+  error: '',
 };
 
 const wallet = (state = INITIAL_STATE, action) => {
@@ -24,6 +26,11 @@ const wallet = (state = INITIAL_STATE, action) => {
       ...state,
       isLoading: false,
       error: action.error,
+    };
+  case GET_EXPENSES:
+    return {
+      ...state,
+      expenses: [...state.expenses, action.expenses],
     };
   default:
     return state;
