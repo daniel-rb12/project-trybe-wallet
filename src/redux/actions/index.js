@@ -3,6 +3,7 @@ import getCoins from '../../services/moedaAPI';
 // Coloque aqui suas actions
 export const GET_EMAIL = 'GET_EMAIL';
 export const GET_EXPENSES = 'GET_EXPENSES';
+export const REMOVE_EXPENSE = 'REMOVE_EXPENSE';
 
 export const REQUEST_API = 'REQUEST_API';
 export const RESPONSE_SUCCESS = 'RESPONSE_SUCCESS';
@@ -15,6 +16,11 @@ export const getEmail = (email) => ({
 
 export const getExpenses = (expenses) => ({
   type: GET_EXPENSES,
+  expenses,
+});
+
+export const removeExpense = (expenses) => ({
+  type: REMOVE_EXPENSE,
   expenses,
 });
 
