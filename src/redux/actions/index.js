@@ -4,6 +4,8 @@ import getCoins from '../../services/moedaAPI';
 export const GET_EMAIL = 'GET_EMAIL';
 export const GET_EXPENSES = 'GET_EXPENSES';
 export const REMOVE_EXPENSE = 'REMOVE_EXPENSE';
+export const EDIT_EXPENSE = 'EDIT_EXPENSE';
+export const CONFIRM_EDIT = 'CONFIRM_EDIT';
 
 export const REQUEST_API = 'REQUEST_API';
 export const RESPONSE_SUCCESS = 'RESPONSE_SUCCESS';
@@ -22,6 +24,15 @@ export const getExpenses = (expenses) => ({
 export const removeExpense = (expenses) => ({
   type: REMOVE_EXPENSE,
   expenses,
+});
+
+export const editExpense = (id) => ({
+  type: EDIT_EXPENSE,
+  id,
+});
+export const confirmEdit = (expenseEdit) => ({
+  type: CONFIRM_EDIT,
+  expenseEdit,
 });
 
 export const requestApi = () => ({
