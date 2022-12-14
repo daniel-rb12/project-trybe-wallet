@@ -69,9 +69,6 @@ class WalletForm extends Component {
     dispatch(confirmEdit(objExpenses));
     this.setState({ value: '',
       description: '',
-      currency: 'USD',
-      method: 'Dinheiro',
-      tag: 'Alimentação',
     });
   };
 
