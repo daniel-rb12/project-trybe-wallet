@@ -11,8 +11,7 @@ class Table extends Component {
   };
 
   editButton = (id) => {
-    const { dispatch, expenses } = this.props;
-    console.log(expenses[id]);
+    const { dispatch } = this.props;
     dispatch(editExpense(id));
   };
 
