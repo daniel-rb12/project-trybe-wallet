@@ -48,8 +48,8 @@ class Login extends React.Component {
             E-mail
             <input
               data-testid="email-input"
-              className="w-full mt-1 px-5 py-1 text-gray-700 bg-gray-600
-              rounded focus:outline-none focus:bg-white"
+              className="w-full mt-1 px-5 py-1 bg-gray-600
+              rounded focus:outline-none"
               type="email"
               name="email"
               id="email"
@@ -62,8 +62,8 @@ class Login extends React.Component {
             Senha
             <input
               data-testid="password-input"
-              className="w-full px-5 mt-1 mb-6 py-1 text-gray-700 bg-gray-600 rounded
-              focus:outline-none focus:bg-white"
+              className="w-full px-5 mt-1 mb-6 py-1 bg-gray-600 rounded
+              focus:outline-none"
               type="password"
               name="password"
               id="password"
