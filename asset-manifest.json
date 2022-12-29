@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/project-trybe-wallet/static/css/main.8ccd86f8.css",
+    "main.js": "/project-trybe-wallet/static/js/main.b11fceee.js",
+    "static/media/money.jpg": "/project-trybe-wallet/static/media/money.8b59e8b1de8415b4d6d9.jpg",
+    "index.html": "/project-trybe-wallet/index.html",
+    "main.8ccd86f8.css.map": "/project-trybe-wallet/static/css/main.8ccd86f8.css.map",
+    "main.b11fceee.js.map": "/project-trybe-wallet/static/js/main.b11fceee.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8ccd86f8.css",
+    "static/js/main.b11fceee.js"
+  ]
+}
