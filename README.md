@@ -14,8 +14,8 @@ documentação completa.
 
 Não é necessária a instalação da aplicação para vê-la funcionar, você pode acessar este [link](https://daniel-rb12.github.io/project-trybe-wallet/) para utilizá-la.
 
-Caso deseje rodar localmente, siga o tutorial abaixo.
-​
+Caso deseje rodar localmente, siga o tutorial abaixo. 
+
 Qualquer dúvida ou problema, entre em contato pelo e-mail : _daniel.ribeiro012@hotmail.com_.
 * 1- Abra o seu terminal e crie um diretório, com nome e local de sua preferência (o comando no Linux e no Mac é o **mkdir**):
 ```
