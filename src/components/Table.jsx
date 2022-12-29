@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { editExpense, removeExpense } from '../redux/actions';
+import '../css/table.css';
 
 class Table extends Component {
   deleteExpense = async (targetId) => {
@@ -18,9 +19,9 @@ class Table extends Component {
   render() {
     const { expenses } = this.props;
     return (
-      <table>
+      <table className="w-full">
         <thead>
-          <tr>
+          <tr className="bg-gray-400 h-10">
             <th>Descrição</th>
             <th>Tag</th>
             <th>Método de pagamento</th>
@@ -35,7 +36,7 @@ class Table extends Component {
         <tbody>
           { expenses.length > 0 && (
             expenses.map((exp) => (
-              <tr key={ exp.id }>
+              <tr className="bg-gray-100 h-10 text-center" key={ exp.id }>
                 <td>
                   { exp.description }
                 </td>
@@ -63,6 +64,7 @@ class Table extends Component {
                 <td>
                   <button
                     data-testid="edit-btn"
+                    className="px-2 text-white font-light bg-sky-500"
                     type="button"
                     onClick={ () => this.editButton(exp.id) }
                   >
@@ -70,6 +72,7 @@ class Table extends Component {
                   </button>
                   <button
                     data-testid="delete-btn"
+                    className="px-2 text-white font-light bg-red-500"
                     type="button"
                     onClick={ () => this.deleteExpense(exp.id) }
                   >

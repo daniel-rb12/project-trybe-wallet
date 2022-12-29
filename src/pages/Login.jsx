@@ -43,7 +43,11 @@ class Login extends React.Component {
     return (
       <div className="flex justify-center items-center h-screen">
         <form className="max-w-sm m-4 p-10 bg-black bg-opacity-80 rounded shadow-xl">
-          <p className="text-white font-medium text-center text-lg font-bold">LOGIN</p>
+          <p
+            className="text-white font-medium text-center text-lg font-bold"
+          >
+            TRYBE WALLET
+          </p>
           <label className="block pt-2 pb-5 text-sm text-white" htmlFor="email">
             E-mail
             <input

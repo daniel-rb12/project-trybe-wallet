@@ -76,73 +76,92 @@ class WalletForm extends Component {
     const { isLoading, value, description, currency, method, tag } = this.state;
     const { currencies, editor } = this.props;
     return (
-      <form>
+      <form className="flex items-center h-20 justify-around bg-gray-800">
         <label
           htmlFor="value"
         >
-          Valor:
+          <span className="pr-2 text-white">Valor:</span>
           <input
             data-testid="value-input"
+            className="border-2 border-black text-sm rounded-xl p-0.5
+            w-32 text-center focus:outline-0"
             type="text"
             name="value"
-            value={ value }
+            value={ value.replace(',', '.') }
             id="value"
+            maxLength="10"
             onChange={ this.handleChange }
           />
         </label>
         <label
           htmlFor="description"
         >
-          Descrição:
+          <span className="pr-2 text-white">Descrição:</span>
           <input
             data-testid="description-input"
+            className="border-2 border-black text-sm rounded-xl
+            p-0.5 text-center focus:outline-0"
             type="text"
             name="description"
             id="description"
             value={ description }
+            maxLength="24"
             onChange={ this.handleChange }
           />
         </label>
-        <select
-          data-testid="currency-input"
-          name="currency"
-          id="currency"
-          value={ currency }
-          onChange={ this.handleChange }
-        >
-          { isLoading ? <option value="carregando">Carregando...</option> : (
-            currencies.map((coin) => (
-              <option key={ coin } value={ coin }>{ coin }</option>
-            ))) }
-        </select>
-        <select
-          data-testid="method-input"
-          name="method"
-          id="method"
-          value={ method }
-          onChange={ this.handleChange }
-        >
-          <option value="Dinheiro">Dinheiro</option>
-          <option value="Cartão de crédito">Cartão de crédito</option>
-          <option value="Cartão de débito">Cartão de débito</option>
-        </select>
-        <select
-          data-testid="tag-input"
-          name="tag"
-          id="tag"
-          value={ tag }
-          onChange={ this.handleChange }
-        >
-          <option value="Alimentação">Alimentação</option>
-          <option value="Lazer">Lazer</option>
-          <option value="Trabalho">Trabalho</option>
-          <option value="Transporte">Transporte</option>
-          <option value="Saúde">Saúde</option>
-        </select>
+        <label htmlFor="currency">
+          <span className="pr-2 text-white">Moeda:</span>
+          <select
+            data-testid="currency-input"
+            className="rounded-xl text-center"
+            name="currency"
+            id="currency"
+            value={ currency }
+            onChange={ this.handleChange }
+          >
+            { isLoading ? <option value="carregando">Carregando...</option> : (
+              currencies.map((coin) => (
+                <option key={ coin } value={ coin }>{ coin }</option>
+              ))) }
+          </select>
+        </label>
+        <label htmlFor="method">
+          <span className="pr-2 text-white">Pagamento:</span>
+          <select
+            data-testid="method-input"
+            className="rounded-xl text-center"
+            name="method"
+            id="method"
+            value={ method }
+            onChange={ this.handleChange }
+          >
+            <option value="Dinheiro">Dinheiro</option>
+            <option value="Cartão de crédito">Cartão de crédito</option>
+            <option value="Cartão de débito">Cartão de débito</option>
+          </select>
+        </label>
+        <label htmlFor="tag">
+          <span className="pr-2 text-white">Tag:</span>
+          <select
+            data-testid="tag-input"
+            className="rounded-xl text-center"
+            name="tag"
+            id="tag"
+            value={ tag }
+            onChange={ this.handleChange }
+          >
+            <option value="Alimentação">Alimentação</option>
+            <option value="Lazer">Lazer</option>
+            <option value="Trabalho">Trabalho</option>
+            <option value="Transporte">Transporte</option>
+            <option value="Saúde">Saúde</option>
+          </select>
+        </label>
         {
           editor ? (
             <button
               type="button"
+              className="px-4 py-1 text-white font-light bg-sky-500 rounded"
               onClick={ () => this.editButton() }
             >
               Editar despesa
@@ -150,6 +169,7 @@ class WalletForm extends Component {
           ) : (
             <button
               type="button"
+              className="px-4 py-1 text-white font-light bg-sky-500 rounded"
               onClick={ this.buttonAction }
             >
               Adicionar despesa
