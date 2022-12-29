@@ -39,3 +39,8 @@ E pronto, agora você consegue visualizar o projeto rodando localmente em sua re
 ## Contatos
 * LinkedIn: [daniel-rb12](https://www.linkedin.com/in/daniel-rb12/)
 * E-mail: _daniel.ribeiro012@hotmail.com_
+
+
+#### Comentários
+Este projeto foi estilizado utilizando Tailwind.
+O diretório helpers e seus arquivos foram desenvolvidos pela [Trybe](https://github.com/tryber).
